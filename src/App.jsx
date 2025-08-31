@@ -196,8 +196,8 @@ function App() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700  text-white px-10 py-6 rounded-b-lg border-2 border-from-blue-500 text-lg shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 flex items-center"
-                  onClick={() => handleNavigate("/contact")}
-                  aria-label="Learn more about us"
+                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                  aria-label="Contact us"
                 >
                   Get in Touch
                 </Button>
