@@ -94,7 +94,7 @@ const Navigation = () => {
   <img
     src={logo}
     alt="Esanad Consult Limited"
-    className=" hidden h-9 sm:h-9 lg:h-10 w-auto"
+    className=" hidden h-10 sm:h-9 lg:h-10 w-auto"
   />
 </Link>
 
@@ -141,7 +141,7 @@ const Navigation = () => {
   {isMenuOpen ? <img
     src={logo}
     alt="Esanad Consult Limited"
-    className=" h-8 w-auto"
+    className=" h-10 w-auto"
   /> : null}
 </Link>
               {isMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-7 h-7" />}
