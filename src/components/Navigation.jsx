@@ -79,7 +79,7 @@ const Navigation = () => {
     <img
       src={logo}
       alt="Esanad Consult Limited"
-      className="h-7 sm:h-7 w-auto"
+      className="h-10 sm:h-7 w-auto"
     />
   </Link>
 )}
