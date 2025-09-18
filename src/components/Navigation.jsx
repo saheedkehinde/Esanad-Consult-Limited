@@ -63,7 +63,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-nav border-b border-white/20">
+    <nav className="sticky top-0 z-50 backdrop-blur-md border-b-2  border-orange/20 b ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
          
@@ -73,13 +73,13 @@ const Navigation = () => {
   <Link
     to="/"
     onClick={() => setIsMenuOpen(false)}
-    className="flex items-center space-x-3 lg:hidden"
+    className="flex items-center space-x-3"
     aria-label="Go to homepage"
   >
     <img
       src={logo}
       alt="Esanad Consult Limited"
-      className="h-8 sm:h-9 w-auto"
+      className="h-7 sm:h-7 w-auto"
     />
   </Link>
 )}
@@ -88,13 +88,13 @@ const Navigation = () => {
 <Link
   to="/"
   onClick={() => setIsMenuOpen(false)}
-  className="hidden lg:flex items-center space-x-3 mr-4"
+  className=" lg:flex items-center space-x-3 mr-4"
   aria-label="Go to homepage"
 >
   <img
     src={logo}
     alt="Esanad Consult Limited"
-    className="h-8 sm:h-9 lg:h-10 w-auto"
+    className=" hidden h-9 sm:h-9 lg:h-10 w-auto"
   />
 </Link>
 
@@ -114,7 +114,7 @@ const Navigation = () => {
           </div>
 
           {/* Get in Touch Button */}
-          <div className="ml-30 lg:block">
+          <div className="hidden ml-30 lg:block">
             <Button 
               onClick={handleGetInTouch}
               className="bg-orange-500 hover:bg-blue-600 text-white px-4 sm:px-4 py-2 rounded-b-lg sm: shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 flex items-center text-sm lg:text-base"
@@ -126,11 +126,25 @@ const Navigation = () => {
 
           {/* Mobile/Tablet Menu Button */}
           <div className="lg:hidden">
+ 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className=" text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className=" flex text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              {isMenuOpen ? <X className="w-3 h-3" /> : <Menu className="w-6 h-6" />}
+              
+  <Link
+  to="/"
+  
+  className=" flex  mr-76 "
+  aria-label="Go to homepage"
+>
+  {isMenuOpen ? <img
+    src={logo}
+    alt="Esanad Consult Limited"
+    className=" h-8 w-auto"
+  /> : null}
+</Link>
+              {isMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-7 h-7" />}
             </button>
           </div>
         </div>
